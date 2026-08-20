@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evens Salies | Senior Research Fellow &amp; Policy Evaluation Specialist</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page-bg: #f3f5f8;
+      --surface: #ffffff;
+      --surface-alt: #f7f9fc;
+      --text: #1f2933;
+      --muted: #52606d;
+      --line: #d9e2ec;
+      --accent: #1f5f8b;
+      --accent-soft: #e9f2f9;
+      --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #eef3f8 0%, var(--page-bg) 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(100%, 980px);
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    .cv {
+      background: var(--surface);
+      border: 1px solid rgba(31, 95, 139, 0.12);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 40px 32px 28px;
+      background:
+        radial-gradient(circle at top right, rgba(31, 95, 139, 0.14), transparent 30%),
+        linear-gradient(135deg, #0f2131 0%, #1f5f8b 100%);
+      color: #f8fbff;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.05;
+      letter-spacing: 0.02em;
+    }
+
+    .hero .role {
+      margin: 12px 0 0;
+      font-size: clamp(1rem, 2vw, 1.35rem);
+      color: rgba(248, 251, 255, 0.9);
+    }
+
+    .contacts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contacts li {
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+    }
+
+    .contacts strong {
+      display: block;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(248, 251, 255, 0.72);
+    }
+
+    .contacts a,
+    .contacts span {
+      color: #ffffff;
+      word-break: break-word;
+    }
+
+    .content {
+      padding: 32px;
+    }
+
+    section + section {
+      margin-top: 32px;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 16px;
+      font-size: 1.2rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    h2::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .summary {
+      font-size: 1.02rem;
+      color: var(--muted);
+    }
+
+    .experience-item + .experience-item {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .experience-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px 16px;
+      margin-bottom: 10px;
+    }
+
+    .experience-header h3,
+    .list-card h3 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .experience-meta {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .list-card {
+      padding: 20px;
+      background: var(--surface-alt);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+
+    .list-card ul {
+      margin-top: 12px;
+    }
+
+    .downloads {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.75rem 1rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .button:hover,
+    .button:focus {
+      background: #dcecf8;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero,
+      .content {
+        padding: 24px 20px;
+      }
+
+      .experience-header {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <main class="cv">
+      <header class="hero">
+        <h1>Evens Salies</h1>
+        <p class="role">Senior Research Fellow &amp; Policy Evaluation Specialist</p>
+        <ul class="contacts">
+          <li>
+            <strong>Email</strong>
+            <a href="mailto:evens.salies@sciencespo.fr">evens.salies@sciencespo.fr</a>
+          </li>
+          <li>
+            <strong>Location</strong>
+            <span>Nice, France</span>
+          </li>
+          <li>
+            <strong>ORCID</strong>
+            <a href="https://orcid.org/0000-0001-6407-5472">0000-0001-6407-5472</a>
+          </li>
+          <li>
+            <strong>Phone</strong>
+            <a href="tel:+33615368773">+33 (0)6 15 36 87 73</a>
+          </li>
+        </ul>
+      </header>
+
+      <div class="content">
+        <section aria-labelledby="summary-title">
+          <h2 id="summary-title">Professional Summary</h2>
+          <p class="summary">
+            Over 20 years of experience in academic research, policy evaluation, and causal
+            inference at Sciences Po. Expert in econometric, quasi-experimental methods, and
+            data mining applied to public policy—regulation of wine markets (PhD topic),
+            network industries, and R&amp;D, with ad hoc research into the tourism and video
+            game sectors. Published in Applied Economics, The Energy Journal, Research Policy
+            and a forthcoming textbook on statistical evaluation methods for public policies
+            (Ellipses, 2027). Proven track record of advising the French Parliament, Budget
+            Office, and national funding agencies. Fluent in French and English, with reading
+            proficiency in Spanish; programming in Stata, R, and Python.
+          </p>
+        </section>
+
+        <section aria-labelledby="experience-title">
+          <h2 id="experience-title">Professional Experience</h2>
+
+          <article class="experience-item">
+            <div class="experience-header">
+              <h3>Senior Research Fellow</h3>
+              <span class="experience-meta">OFCE - Sciences Po, Nice/Paris, France · 2005–Present</span>
+            </div>
+            <ul>
+              <li>Lead ex-post reviews of the French R&amp;D tax credit (CIR), with results adopted by the Cour des comptes, the Ministry of Higher Education and Research, and presented in hearings at Parliament.</li>
+              <li>Designed a field experiment on smart metering (TICELEC project, €200k).</li>
+              <li>Participated in the Journées d’Études du Tourisme de Nice (5th edition) and studied the impact of the COVID-19 pandemic on the hospitality industry in the Alpes-Maritimes.</li>
+              <li>Published on innovation in environmental economics and R&amp;D support policy in Energy Policy, Economics Bulletin, The Energy Journal, and other journals; reviewer for 20+ journals including The Economic Journal and Energy Economics.</li>
+              <li>Taught graduate-level econometrics, program evaluation, and Stata programming at Université Côte d’Azur and Sciences Po Menton; supervised 25+ master theses.</li>
+            </ul>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-header">
+              <h3>Postdoctoral Research Associate</h3>
+              <span class="experience-meta">City University London, UK · 2002–2004; University Paris Saclay, France · 2005</span>
+            </div>
+            <ul>
+              <li>Conducted econometric analysis of UK electricity market liberalisation, covering retail pricing, market power, and fuel poverty; findings published in Applied Economics.</li>
+              <li>Developed a model for estimating switching costs between electricity retailers.</li>
+            </ul>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-header">
+              <h3>Research Associate</h3>
+              <span class="experience-meta">University of East Anglia, Norwich, UK · 2001–2002</span>
+            </div>
+            <ul>
+              <li>Collaborated on an ESRC project on social obligations and economic regulation in energy markets.</li>
+              <li>Built panel-data models of consumer vulnerability and utility pricing; findings published in The Energy Journal.</li>
+            </ul>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-header">
+              <h3>Teaching &amp; Research Assistant (ATER)</h3>
+              <span class="experience-meta">France, Great Britain &amp; Ukraine · 1998–2025</span>
+            </div>
+            <p>
+              France: Université Côte-d’Azur (2016–2025), Sciences Po Menton (2010–2011, 2023),
+              Université Rennes 1 (2006–2010), ESC Reims (2004–2006), ENSAE (2003–2004),
+              Université de Perpignan (1998–2001). Great Britain: City University London (2002).
+              Ukraine: University of Simferopol (1999).
+            </p>
+            <ul>
+              <li>Lectures in policy evaluation methods, microeconomics and game theory, econometrics, statistics, and statistical packages.</li>
+              <li>Co-supervised 25+ master theses in economics and other fields.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section aria-labelledby="skills-title">
+          <h2 id="skills-title">Key Skills</h2>
+          <div class="grid">
+            <div class="list-card">
+              <h3>Methods &amp; Modelling</h3>
+              <ul>
+                <li>Causal inference and program evaluation: potential outcomes, DID, RDD, synthetic control, matching estimators, panel data.</li>
+                <li>Econometric modelling: time series, microeconometrics, total factor productivity estimation.</li>
+              </ul>
+            </div>
+            <div class="list-card">
+              <h3>Data &amp; Programming</h3>
+              <ul>
+                <li>Statistical programming: Stata (advanced), R, Python (scikit-learn, pandas).</li>
+                <li>Data management: Eurostat, R&amp;D Scoreboard, FARE, DADS, family survey data.</li>
+              </ul>
+            </div>
+            <div class="list-card">
+              <h3>Policy &amp; Communication</h3>
+              <ul>
+                <li>Policy analysis and consulting: expert reports for the French Parliament, Budget Office, and Ministry of Higher Education and Research.</li>
+                <li>Research communication: peer-reviewed publications, policy briefs, press interviews and papers in AFP, Reuters, Les Echos, Capital, Le Monde, and Alternatives économiques.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="education-title">
+          <h2 id="education-title">Education</h2>
+          <ul>
+            <li>PhD thesis on Common Agricultural Policy effects in French wine markets (defended 2003, with honours), University of Perpignan Via Domitia.</li>
+            <li>Postgraduate Degree in Economic Calculus (with honours), University of Montpellier.</li>
+            <li>MA in Econometrics (with honours), University of Montpellier.</li>
+            <li>BA in Econometrics, University of Social Sciences, Toulouse.</li>
+            <li>Postdoctoral training at City University London in energy economics and statistical methods.</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="publications-title">
+          <h2 id="publications-title">Selected Publications &amp; Reports</h2>
+          <ul>
+            <li><em>Méthodes statistiques d’évaluation des politiques publiques</em>, Ellipses (collection Références sciences), 2027.</li>
+            <li><em>Compétitivité européenne : un état des lieux</em>, Revue de l’OFCE, 2026.</li>
+            <li><em>Impact de la nature du financement de la recherche sur ses résultats</em>, MESRE, 2022.</li>
+            <li><em>L’impact du CIR sur l’emploi dans la R&amp;D du secteur privé : une revue critique</em>, Revue de l’OFCE, 2021.</li>
+            <li><em>Real time pricing when some consumers resist in saving electricity</em>, Energy Policy, 2013.</li>
+            <li><em>Charges, costs and market power: the deregulated UK electricity retail market</em>, The Energy Journal, 2004.</li>
+          </ul>
+          <div class="downloads">
+            <a class="button" href="cv.pdf" target="_blank" rel="noopener" aria-label="Open the full CV PDF in a new tab">Download full CV (PDF)</a>
+            <a class="button" href="selectedpublications_evenssalies.pdf" target="_blank" rel="noopener" aria-label="Open the selected publications PDF in a new tab">Selected publications (PDF)</a>
+            <a class="button" href="referees_evenssalies.pdf" target="_blank" rel="noopener" aria-label="Open the referees PDF in a new tab">Referees (PDF)</a>
+            <a class="button" href="teachingevaluations_evenssalies.pdf" target="_blank" rel="noopener" aria-label="Open the teaching evaluations PDF in a new tab">Teaching evaluations (PDF)</a>
+          </div>
+        </section>
+
+        <section aria-labelledby="languages-title">
+          <h2 id="languages-title">Languages</h2>
+          <ul>
+            <li>French (native)</li>
+            <li>English (TOEFL CBT 200, fluent)</li>
+            <li>Spanish (high-school level, reading proficiency)</li>
+          </ul>
+        </section>
+
+      </div>
+      <footer class="content">
+        This page is a web equivalent of the public CV available in <a href="cv.pdf">cv.pdf</a>.
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
