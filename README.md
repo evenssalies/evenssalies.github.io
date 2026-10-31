@@ -1,3 +1,6 @@
 Economist and researcher interested in policy evaluation and causal inference. 
 
 Outside my professional work, I have been active in the demoscene under the handle ulrick since the Atari/Amiga era. I composed music for the game Explora III (Infomedia, 1990), was a member of IRIS (1990-1993), later FRequency, and occasionally still contribute to demoscene music productions.
+
+In retrospect, these activities are less disconnected than they seem. It seems I am fascinated by how technology enables creation, as teenager composing tracker music for Amiga, Atari in the 1990s, as economist studying innovation decades, or as a researcher using models and computer-based calculations. The medium changed; the underlying curiosity remained.
+
